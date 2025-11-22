@@ -1,0 +1,116 @@
+:root {
+  --primary: #5f03c8;
+  --secondary: #1826a6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--secondary);
+  color: black;
+  height: 100vh;
+  width: 100%;
+}
+
+.logo .logokiri {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10rem;
+  height: auto;
+}
+
+.logo .logokanan:hover .logokiri {
+  left: -10%;
+}
+
+.logo .logokiri:hover .logokanan {
+  right: -10%;
+}
+
+.logo .logokanan {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10rem;
+  height: auto;
+}
+
+.hero .bg img {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.info .text {
+  width: 25%;
+  position: absolute;
+  top: 70%;
+  right: 0;
+  padding: 3rem 2rem 3rem;
+  background: linear-gradient(
+    to left,
+    rgba(44, 30, 30, 0.7),
+    rgba(44, 30, 30, 0)
+  );
+  color: white;
+  font-size: 5rem;
+  font-weight: 700;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+  transform: translateY(0);
+  transition: transform 0.35s ease;
+}
+
+.info .text p {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, max-height 0.4s ease, transform 0.4s ease;
+  font-size: 1.8rem;
+  font-weight: 200;
+  text-align: justify;
+}
+
+.info .text:hover {
+  transform: translateY(-75%);
+}
+
+.info .text:hover p {
+  opacity: 1;
+  max-height: 500px;
+  transform: translateY(0);
+}
+
+.foot-bg {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.2rem;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(0.2rem);
+  -webkit-backdrop-filter: blur(0.2rem);
+  color: white;
+  text-align: center;
+}
+
+.foot-bg p {
+  font-size: 1.8rem;
+}
