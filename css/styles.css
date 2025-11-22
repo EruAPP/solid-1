@@ -61,7 +61,7 @@ body {
 .info .text {
   width: 25%;
   position: absolute;
-  top: 70%;
+  bottom: 15%;
   right: 0;
   padding: 3rem 2rem 3rem;
   background: linear-gradient(
@@ -74,28 +74,31 @@ body {
   font-weight: 700;
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
   transform: translateY(0);
-  transition: transform 0.35s ease;
+  transition: width 0.7s ease, transform 0.8s ease, padding-left 0.8s ease;
 }
 
 .info .text p {
   opacity: 0;
   max-height: 0;
   overflow: hidden;
-  transform: translateY(20px);
-  transition: opacity 0.4s ease, max-height 0.4s ease, transform 0.4s ease;
+  transform: translateY(0);
+  transition: opacity 0.8s ease, max-height 0.8s ease, transform 0.8s ease;
   font-size: 1.8rem;
   font-weight: 200;
   text-align: justify;
 }
 
 .info .text:hover {
-  transform: translateY(-75%);
+  transform: translateY(0);
+  width: 40%;
+  padding-left: 10rem;
 }
 
 .info .text:hover p {
   opacity: 1;
   max-height: 500px;
   transform: translateY(0);
+  transition-delay: 0.1s;
 }
 
 .foot-bg {
