@@ -14,6 +14,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -22,6 +23,7 @@ body {
   color: black;
   height: 100vh;
   width: 100%;
+  overflow-x: hidden;
 }
 
 .logo .logokiri {
@@ -32,20 +34,44 @@ body {
   height: auto;
 }
 
-.logo .logokanan:hover .logokiri {
-  left: -10%;
-}
-
-.logo .logokiri:hover .logokanan {
-  right: -10%;
-}
-
 .logo .logokanan {
   position: absolute;
   top: 0;
   right: 0;
   width: 10rem;
   height: auto;
+  transform: translateX(10rem);
+  transition: transform 0.4s ease;
+}
+
+.nav-toogle {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.8rem;
+  height: 8rem;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(0.4rem);
+  border-radius: 0 0.6rem 0.6rem 0;
+  cursor: pointer;
+  transition: background 0.3s ease, left 0.4s ease;
+  z-index: 999;
+}
+
+.nav-toggle:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -15%;
+  width: 15%;
+  height: 100vh;
+  background: rgba(20, 20, 20, 0.8);
+  backdrop-filter: blur(1rem);
+  transition: left 0.4s ease;
 }
 
 .hero .bg img {
@@ -58,11 +84,14 @@ body {
   z-index: -1;
 }
 
-.info .text {
-  width: 25%;
+.info {
   position: absolute;
-  bottom: 15%;
   right: 0;
+  bottom: 15%;
+  width: 30rem;
+}
+
+.info .text {
   padding: 3rem 2rem 3rem;
   background: linear-gradient(
     to left,
@@ -74,6 +103,7 @@ body {
   font-weight: 700;
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
   transform: translateY(0);
+  transform: translateX(0);
   transition: width 0.7s ease, transform 0.8s ease, padding-left 0.8s ease;
 }
 
@@ -88,23 +118,25 @@ body {
   text-align: justify;
 }
 
+.info:hover {
+  width: 50rem;
+  padding-left: 10rem;
+}
+
 .info .text:hover {
   transform: translateY(0);
-  width: 40%;
-  padding-left: 10rem;
 }
 
 .info .text:hover p {
   opacity: 1;
   max-height: 500px;
   transform: translateY(0);
-  transition-delay: 0.1s;
 }
 
 .foot-bg {
   position: fixed;
   bottom: 0;
-  left: 0;
+  right: 0;
   width: 100%;
   padding: 1.2rem;
   background: rgba(255, 255, 255, 0.2);
@@ -112,6 +144,8 @@ body {
   -webkit-backdrop-filter: blur(0.2rem);
   color: white;
   text-align: center;
+  transform: translateX(0);
+  transition: width 0.4s ease;
 }
 
 .foot-bg p {
