@@ -32,9 +32,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnUp = document.getElementById("btnUp");
   const btnDown = document.getElementById("btnDown");
 
-  let index = 0; // item pertama (Beranda)
+  let index = 0;
 
-  // Set item pertama sebagai aktif
   function updateActive() {
     items.forEach((li, i) => {
       li.classList.toggle("active", i === index);
