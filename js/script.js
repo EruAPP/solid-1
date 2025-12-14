@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const sidebar = document.getElementById("sidebar");
   const btn = document.getElementById("navbtn");
   const foot = document.getElementById("foot");
+  const roun = document.getElementById("roun");
   const logokiri = document.getElementById("logokiri");
   const logokanan = document.getElementById("logokanan");
 
@@ -10,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (sidebar.style.left === "0rem") {
       //hilang
       sidebar.style.left = "-15%";
-      btn.style.left = "0";
+      roun.style.left = "0";
       btn.style.transform = "rotate(90deg)";
       foot.style.width = "100%";
       logokiri.style.display = "inline-block";
@@ -18,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       //muncul
       sidebar.style.left = "0rem";
-      btn.style.left = "15%";
+      roun.style.left = "15%";
       foot.style.width = "85%";
       btn.style.transform = "rotate(270deg)";
       logokiri.style.display = "none";
